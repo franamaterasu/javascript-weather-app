@@ -2,10 +2,10 @@
   outline: none;
 
   &--error {
-    border-color: #c13838;
+    border-color: $red;
 
     &::placeholder {
-      color: #c13838;
+      color: $red;
     }
   }
 }

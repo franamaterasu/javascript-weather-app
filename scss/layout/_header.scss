@@ -4,7 +4,7 @@
 
   &__title,
   &__subtitle {
-    color: #fff;
+    color: $white;
     font-family: $default-font;
     font-weight: $font--light;
   }
@@ -28,27 +28,27 @@
     width: 100%;
     outline: none;
     background-color: transparent;
-    border: 1px solid #fff;
+    border: 1px solid $white;
     padding: rem(10) rem(15);
     box-sizing: border-box;
     font-family: $default-font;
     font-weight: $font--light;
-    color: #fff;
+    color: $white;
     border-radius: rem(16);
 
     &::placeholder {
-      color: #fff;
+      color: $white;
     }
   }
 
   &__icon {
     position: absolute;
-    color: #fff;
+    color: $white;
     top: rem(13);
     right: rem(20);
 
     &--error {
-      color: #c13838;
+      color: $red;
     }
   }
 
