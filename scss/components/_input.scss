@@ -1,0 +1,11 @@
+.input {
+  outline: none;
+
+  &--error {
+    border-color: #c13838;
+
+    &::placeholder {
+      color: #c13838;
+    }
+  }
+}

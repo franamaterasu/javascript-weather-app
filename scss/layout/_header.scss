@@ -1,7 +1,6 @@
 .header {
   opacity: 1;
   transition: all .5s ease-in-out;
-  position: relative;
 
   &__title,
   &__subtitle {
@@ -11,14 +10,14 @@
   }
 
   &__title {
-    font-size: 52px;
-    margin-bottom: 10px;
+    font-size: rem(52);
+    margin-bottom: rem(10);
   }
 
   &__subtitle {
-    font-size: 18px;
-    margin-bottom: 30px;
-    font-weight: 300;
+    font-size: rem(18);
+    margin-bottom: rem(30);
+    font-weight: $font--light;
   }
 
   &__form {
@@ -30,12 +29,12 @@
     outline: none;
     background-color: transparent;
     border: 1px solid #fff;
-    padding: 10px 15px;
+    padding: rem(10) rem(15);
     box-sizing: border-box;
     font-family: $default-font;
     font-weight: $font--light;
     color: #fff;
-    border-radius: 16px;
+    border-radius: rem(16);
 
     &::placeholder {
       color: #fff;
@@ -45,8 +44,12 @@
   &__icon {
     position: absolute;
     color: #fff;
-    top: 13px;
-    right: 20px;
+    top: rem(13);
+    right: rem(20);
+
+    &--error {
+      color: #c13838;
+    }
   }
 
   &--hidden {
@@ -59,16 +62,20 @@
 @media(min-width: 760px) {
   .header {
     &__title {
-      font-size: 71px;
-      margin-bottom: 10px;
+      font-size: rem(71);
+      margin-bottom: rem(10);
     }
 
     &__subtitle {
-      margin-bottom: 40px;
+      margin-bottom: rem(40);
     }
 
     &__form {
-      max-width: 400px;
+      max-width: rem(400);
+    }
+
+    &__input {
+      font-size: rem(15);
     }
   }
 }
@@ -76,16 +83,24 @@
 @media(min-width: 1200px) {
   .header {
     &__title {
-      font-size: 92px;
+      font-size: rem(92);
     }
 
     &__subtitle {
-      font-size: 22px;
-      margin-bottom: 50px;
+      font-size: rem(22);
+      margin-bottom: rem(50);
     }
 
     &__form {
-      max-width: 500px;
+      max-width: rem(500);
+    }
+
+    &__input {
+      font-size: rem(16);
+    }
+
+    &__icon {
+      top: rem(15);
     }
   }
 }

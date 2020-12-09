@@ -3,7 +3,6 @@ let searchCity = document.getElementById("searchCity");
 let cityName;
 let sendCity = document.getElementById("sendCity");
 let mainSection = document.getElementById("main");
-let cityInfo;
 
 // Acceso al DOM
 let appIntro = document.getElementById("appIntro");
@@ -22,7 +21,6 @@ function getApi() {
   )
     .then((response) => response.json())
     .then((data) => {
-      cityInfo = data;
       showInfoCity(
         data.weather[0].icon,
         data.name,
@@ -38,10 +36,20 @@ function getApi() {
 function displayCityName(e) {
   e.preventDefault();
   cityName = searchCity.value;
-  getApi();
-  searchCity.value = "";
-  appIntro.classList.add("header--hidden");
-  mainSection.classList.add("main--show");
+
+  if (cityName === "") {
+    searchCity.classList.add("input--error");
+    searchCity.placeholder = "Insert the city...";
+    sendCity.classList.add("header__icon--error");
+  } else {
+    getApi();
+    searchCity.value = "";
+    appIntro.classList.add("header--hidden");
+    mainSection.classList.add("main--show");
+    searchCity.classList.remove("input--error");
+    searchCity.placeholder = "";
+    sendCity.classList.remove("header__icon--error");
+  }
 }
 
 sendCity.addEventListener("click", displayCityName);

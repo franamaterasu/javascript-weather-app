@@ -1,0 +1,25 @@
+.card {
+  text-align: center;
+  color: #fff;
+  font-family: $default-font;
+
+  &__temp {
+    font-size: rem(74)
+  }
+
+  &__name {
+    font-size: rem(30);
+    font-weight: $font--light;
+    margin-bottom: rem(23);
+  }
+
+  &__weather {
+    font-size: rem(25);
+    margin-bottom: rem(5);
+  }
+
+  &__resume {
+    font-size: rem(15);
+    font-weight: $font--light;
+  }
+}

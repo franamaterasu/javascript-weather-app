@@ -1,0 +1,5 @@
+$general-font-size: 16;
+
+@function rem($pixels, $context: $general-font-size) {
+  @return #{$pixels/$context}rem;
+}
