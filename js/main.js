@@ -6,6 +6,7 @@ let mainSection = document.getElementById("main");
 let cityInfo;
 
 // Acceso al DOM
+let appIntro = document.getElementById("appIntro");
 let cityDomTemp = document.getElementById("cityTemp");
 let cityDomName = document.getElementById("cityName");
 let cityDomIcon = document.getElementById("cityIcon");
@@ -39,6 +40,8 @@ function displayCityName(e) {
   cityName = searchCity.value;
   getApi();
   searchCity.value = "";
+  appIntro.classList.add("header--hidden");
+  mainSection.classList.add("main--show");
 }
 
 sendCity.addEventListener("click", displayCityName);

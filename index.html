@@ -5,24 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>JS Weather App</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <link rel="stylesheet" href="css/main.min.css">
 </head>
 <body>
-  <main id="main">
-    <form>
-      <input id="searchCity" type="text" placeholder="Insert your city" />
-      <button id="sendCity" type="submit">Send</button>
-    </form>
-    <hr/>
-    <article class="card">
-      <p id="cityTemp" class="card__temp"></p>
-      <h3 id="cityName" class="card__name"></h3>
-      <img id="cityIcon" />
-      <div class="card__weather">
-        <div id="cityWeatherName"></div>
-        <div id="cityWeatherDescription"></div>
-      </div>
-    </article>
-  </main>
+  <section class="app">
+    <section class="app__content">
+      <header id="appIntro" class="header">
+        <h1 class="header__title">Hellow Fran</h1>
+        <p class="header__subtitle">Check the weather by the city</p>
+        <form class="header__form">
+          <input class="input header__input" id="searchCity" type="text" placeholder="Search your city" />
+          <i id="sendCity" class="fas fa-search header__icon"></i>
+        </form>
+      </header>
+      <main class="main" id="main">
+        <article class="card">
+          <p id="cityTemp" class="card__temp"></p>
+          <h3 id="cityName" class="card__name"></h3>
+          <img id="cityIcon" />
+          <div class="card__weather">
+            <div class="card__weather" id="cityWeatherName"></div>
+            <div class="card__resume" id="cityWeatherDescription"></div>
+          </div>
+        </article>
+      </main>
+    </section>
+  </section>
 </body>
 <script src="js/main.js"></script>
 </html>
