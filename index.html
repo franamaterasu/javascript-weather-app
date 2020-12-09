@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Weather App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" />
+</head>
+<body>
+  <main id="main">
+    <form>
+      <input id="searchCity" type="text" placeholder="Insert your city" />
+      <button id="sendCity" type="submit">Send</button>
+    </form>
+    <hr/>
+    <article class="card">
+      <p id="cityTemp" class="card__temp"></p>
+      <h3 id="cityName" class="card__name"></h3>
+      <img id="cityIcon" />
+      <div class="card__weather">
+        <div id="cityWeatherName"></div>
+        <div id="cityWeatherDescription"></div>
+      </div>
+    </article>
+  </main>
+</body>
+<script src="js/main.js"></script>
+</html>
